@@ -17,12 +17,18 @@ mkApp = do
   component "App" \_ -> React.do
     pure
       $ N.view
-          { style: R.css { alignItems: "center", justifyContent: "center", height: "100%" }
+          { style:
+            R.css
+              { alignItems: "center"
+              , justifyContent: "center"
+              , height: "100%"
+              , padding: "20px"
+              }
           , children:
             [ N.text
-                { style: R.css { fontSize: 42 }
+                { style: R.css { fontSize: 24, color: "#f2f2f2" }
                 , children:
-                  [ N.string "madeline.dev" ]
+                  [ N.string "hi." ]
                 }
             ]
           }
